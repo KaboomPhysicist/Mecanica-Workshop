@@ -1,0 +1,66 @@
+
+La tarea es un problema computacional, o uno 
+teórico "difícil", resuelto en forma individual o 
+por parejas.
+
+Algunas SUGERENCIAS para la tarea. Puede proponer 
+otro problema, no es necesario que el ejercicio 
+sea computacional.
+
+Hallar numéricamente una trayectoria de un 
+oscilador no lineal usando directamente el 
+principio de Hamilton, puede ensayar algún método 
+Montecarlo.
+
+Sistema sometido a forzante rápida: Hallar 
+solución numérica y comparar con el modelo de la 
+sección 30.
+
+Verificar numéricamente el rompimiento de simetría 
+por aplicación de una fuerza rápidamente 
+oscilante. Ver problemas de §30 y 
+https://arxiv.org/abs/hep-th/0308160
+
+Oscilador paramétrico: Solución numérica cuando la 
+frecuencia varía en forma de "onda cuadrada" o 
+"diente de sierra".
+
+Analogía del oscilador paramétrico y el movimiento 
+de una partícula cuántica en 1D sometida a un 
+potencial periódico. Bandas de Bloch.
+
+Modos normales y frecuencias propias de una 
+molécula no plana.
+
+Cadena masas conectados por resortes, como en los 
+problemas 6.26 y 6.27 de Serbo-Kotkin. Considere 
+más de 6 masas iguales unidas con resortes de 
+constantes k y k' alternadas. Halle numéricamente 
+las frecuencias propias en forma exacta y usando 
+la aproximación de "tight-binding".
+
+Machine learning. Considerar el "problema inverso" 
+estudiado en §12 de Landau. Consiste en obtener un 
+potencial U(x) si se conoce el período como 
+función de la energía T(E). Use los casos de los 
+problemas de §11 y otros para "entrenar" un modelo 
+y busque un caso diferente para "test".
+
+Oscilador paramétrico amortiguado: Mediante 
+solución numérica verificar movimientos estables y 
+no estables.
+
+Analizar mediante solución numérica la "fase de 
+impacto" discutida en el problema 5.12 de 
+Serbo-Kotkin.
+
+Verificar numéricamente la inestabilidad que se 
+menciona en la figura 32, respecto a la curva de 
+resonancia no lineal.
+
+Solución numérica de la ecuación de Duffing en los 
+casos gama cercana a w0, w0/2, 2w0, 3w0.
+
+Oscilador armónico con teoría de cuerdas.
+
+Problemas "difíciles" de capítulos 5 a 8 de Serbo.

@@ -1,0 +1,48 @@
+
+Algunas sugerencias para la tarea sobre 
+la unidad II
+
+Cuerpo rígido asimétrico: El problema de 
+la rotación alrededor del eje 
+intermedio,
+https://www.youtube.com/watch?v=1VPfZ_XzisU
+
+Cinemática del cuerpo rígido con 
+cuaterniones,
+https://www.wikiwand.com/en/Conversion_between_quaternions_and_Euler_angles
+
+El problema del "bloqueo del cardán".
+
+Problema del "acoplamiento de marea" en 
+el movimiento de la luna, 
+https://es.wikipedia.org/wiki/Acoplamiento_de_marea
+
+El movimiento con "efecto" de la bola de 
+béisbol o el balón de fútbol, 
+https://es.wikipedia.org/wiki/Efecto_Magnus
+
+Soluciones numéricas y aplicaciones del 
+trompo de Kovalevskaya.
+
+Machine learning. Formar un cuerpo 
+rígido en N dimensiones con un conjunto 
+de datos. Definir un "tensor de inercia" 
+N-dimensional y encontrarle sus valores 
+propios y vectores propios. Examinar un 
+posible modelo de reducción de 
+dimensionalidad similar al análisis de 
+componentes principales.
+
+Dinámica del brazo de un robot, 
+https://ocw.mit.edu/courses/mechanical-engineering/2-12-introduction-to-robotics-fall-2005/lecture-notes/chapter7.pdf
+
+Uso de cuaterniones para resolver el 
+cubo de Rubik. 
+https://github.com/srinathvrao/RubiksCubeQuaternions 
+
+La física clásica de la resonancia 
+magnética nuclear
+https://bit.ly/3eAck6
+
+Problemas "difíciles" de capítulo 9 de 
+Serbo
