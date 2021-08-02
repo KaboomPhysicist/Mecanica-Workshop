@@ -47,7 +47,7 @@ def position(psi, theta):
     Z = np.cos(theta)
     return X, Y, Z
 
-w1, w2, w3, theta, psi = solve_system(1,0,0,np.pi/2,0,0,10,100000)
+w1, w2, w3, theta, psi = solve_system(0,1,0,np.pi/2,0,0,10,10000)
 
 
 r=2
