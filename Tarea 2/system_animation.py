@@ -47,7 +47,7 @@ def position(psi, theta):
     Z = np.cos(theta)
     return X, Y, Z
 
-w1, w2, w3, theta, psi = solve_system(0,1,0,np.pi/2,0,0,10,10000)
+w1, w2, w3, theta, psi = solve_system(1,0,1,np.pi/4,np.pi/8,0,10,10000)
 
 
 r=2
@@ -99,15 +99,15 @@ ax = p3.Axes3D(fig)
 N=len(psi)
 
 global vel
-vel = 50
+vel = 10
 
 def update(num):
     x,y,z = X[vel*num], Y[vel*num], Z[vel*num] 
     eje1.set_data(np.linspace(0,x,100),np.linspace(0,y,100))
     eje1.set_3d_properties(np.linspace(0,z,100))
 
-    trayectoria1.set_data(X[max(0,int(0*vel*num)):vel*num],Y[max(0,int(0*vel*num)):vel*num])
-    trayectoria1.set_3d_properties(Z[max(0,int(0*vel*num)):vel*num])
+    trayectoria1.set_data(X[max(0,int(0.1*vel*num)):vel*num],Y[max(0,int(0.1*vel*num)):vel*num])
+    trayectoria1.set_3d_properties(Z[max(0,int(0.1*vel*num)):vel*num])
     return eje1, trayectoria1
 
 eje1, = ax.plot((0,X[0]),(0,Y[0]),(0,Z[0]))
@@ -124,4 +124,5 @@ ax.set_zlabel('X')
 
 
 ani = animation.FuncAnimation(fig, update, N//vel, interval=10000/(N//vel), blit=False)
-ani.save('ani001.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
+plt.show()
+ani.save('ani004.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
