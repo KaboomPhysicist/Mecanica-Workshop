@@ -11,7 +11,7 @@ def solve_system(p0, q0, r0, th0, ps0, t0, t1,nt=100000):
 
     global M
     M=1
-    g=9.8
+    g=-9.8
     I=1
     global x0, y0, z0
     x0=-2
@@ -47,7 +47,7 @@ def position(psi, theta):
     Z = np.cos(theta)
     return X, Y, Z
 
-w1, w2, w3, theta, psi = solve_system(0,0,0,np.pi/2,0,0,10,100000)
+w1, w2, w3, theta, psi = solve_system(1,0,0,np.pi/2,0,0,10,100000)
 
 
 r=2
@@ -99,7 +99,7 @@ ax = p3.Axes3D(fig)
 N=len(psi)
 
 global vel
-vel = 10
+vel = 50
 
 def update(num):
     x,y,z = X[vel*num], Y[vel*num], Z[vel*num] 
@@ -114,16 +114,16 @@ eje1, = ax.plot((0,X[0]),(0,Y[0]),(0,Z[0]))
 trayectoria1, = ax.plot(X[0],Y[0],Z[0])
 
 ax.set_xlim3d([-2, 2.0])
-ax.set_xlabel('X')
+ax.set_xlabel('Z')
 
 ax.set_ylim3d([-2, 2.0])
 ax.set_ylabel('Y')
 
 ax.set_zlim3d([-5.0, 5.0])
-ax.set_zlabel('Z')
+ax.set_zlabel('X')
 
 
 ani = animation.FuncAnimation(fig, update, N//vel, interval=10000/(N//vel), blit=False)
 plt.show()
 
-ani.save('animation_gravitational_field.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
+ani.save('ani001.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
