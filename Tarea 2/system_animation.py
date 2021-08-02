@@ -124,6 +124,4 @@ ax.set_zlabel('X')
 
 
 ani = animation.FuncAnimation(fig, update, N//vel, interval=10000/(N//vel), blit=False)
-plt.show()
-
 ani.save('ani001.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
