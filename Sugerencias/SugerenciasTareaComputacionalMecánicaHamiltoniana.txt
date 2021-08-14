@@ -1,0 +1,118 @@
+----------
+
+Caos con el hamiltoniano de Henon-Heiles.
+Obtener de la literatura los parámetros que
+dan lugar a trayectorias caóticas.
+Definir una condición (x0,y0,px0,py0) ubicada
+en la región caótica.
+Definir el tiempo inicial t=0 y escoger un
+tiempo final t=tF.
+Integrar numéricamente las ecuaciones de
+Hamilton entre t = 0 y t = tF y construir una
+tabla de 5 columnas: (t,xt,yt,pxt,pyt).
+Escoger un tiempo menor que tF, por ejemplo tM
+= 0.8 tF.
+Definir el siguiente problema para usar redes
+neuronales recurrentes con series de tiempo:
+tomando los datos de la tabla correspondientes
+al intervalo de tiempos (t = 0, t = tM) como
+datos de entrenamiento, usar el algoritmo para
+predecir los datos correspondientes al
+intervalo de tiempos (t = tM, t = tF).
+Luego elaborar la gráfica de la distancia
+tiempo-a-tiempo entre los datos de test de la
+integración numérica y los que predice el
+algoritmo.
+Repetir con otro método de análisis de series
+de tiempo.
+Repetir con el hamiltoniano que se obtiene
+haciendo cero el coeficiente de no linealidad.
+Finalmente analizar los resultados.
+
+----------
+
+Considere un sistema unidimensional cuyo 
+hamiltoniano depende de 2 parámetros, λ1 y λ2. 
+Considere movimientos periódicos. Defina un 
+procedimiento, analítico o numérico, que 
+permita calcular I dados λ1 y λ2. Analice la 
+adiabaticidad eligiendo una dependencia 
+temporal de los parámetros en los casos en que 
+varíen muy poco durante un período, tengan 
+alguna variación
+
+----------
+
+Considere el problema 13.2 de Kotkin-Serbo. 
+Reproduzca las gráficas de la Fig. 175 para 
+varias velocidades de alejamiento de las 
+paredes. Defina una frontera entre "no 
+adiabaticidad" y "adiabaticidad".
+
+----------
+
+Considere el problema 13.19 de Kotkin-Serbo. 
+Resuelva el problema numéricamente y compare con 
+la solución basada en los invariantes 
+adiabáticos.
+
+----------
+
+Considere un sistema unidimensional cuyo 
+hamiltoniano depende de 2 parámetros, λ1 y λ2. 
+Considere movimientos periódicos. Calcule el 
+ángulo de Hanay en los casos adiabático y no 
+adiabático.
+
+----------
+
+Considere un sistema bidimensional sometido a 
+una perturbación (Henon-Heiles o similar). 
+Defina un procedimiento, analítico o numérico, 
+que permita calcular las variables de acción 
+Ix, Iy y diagramas de fase, en los casos 
+perturbativo y no perturbativo.
+
+----------
+
+Considere un sistema bidimensional no lineal 
+(Henon-Heiles o similar). Resuelva las 
+ecuaciones de movimiento y compruebe la 
+sensibilidad a las condiciones iniciales.
+
+----------
+
+Considere un sistema bidimensional no lineal 
+(Henon-Heiles o similar). Resuelva las 
+ecuaciones de movimiento y con el fin de 
+implementar el siguiente algoritmo de ML para 
+estudiar la sensibilidad a las condiciones 
+iniciales. Construya un data set integrando 
+numéricamente las ecuaciones de Hamilton. Parta 
+el intervalo de integración de tal manera que 
+el 70% de los tiempos sean usados para formar 
+un conjunto de datos de train y el 30% restante 
+de test. Use diferentes algoritmos de análisis 
+de series de tipo para chequearlos con los 
+datos de test después de haber entrenado un 
+algoritmo con train. Analice los resultados y 
+verifique la posible dependencia del modelo y 
+comprobar la sensibilidad a las CI.
+
+----------
+
+En el problema anterior, use algoritmos de 
+análisis de correlación y de causalidad para 
+caracterizar la posible dependencia a las CI. 
+Elabore superficies de Poincaré y realice el 
+estudio para CI situadas en diferentes regiones 
+del espacio de fases.
+
+----------
+
+Formulación lagrangiana y hamiltoniana de 
+circuitos eléctricos.
+https://bit.ly/3ApDmGS
+Estudiar y realizar alguna simulación.
+
+----------
