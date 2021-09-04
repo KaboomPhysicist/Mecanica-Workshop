@@ -30,26 +30,39 @@ def solve_system(x0,y0,px0,py0,t0,tf):
     return X,Y,PX,PY,t
 
 fig = plt.figure(figsize=(14,9))
+plt.title("Movimiento de la partícula")
+plt.xlabel("X [m]")
+plt.ylabel("Y [m]")
+
 
 
 sol=solve_system(0,0.1,0.44,0.1,0,500)
 N=len(sol[0])
 
 global vel
-vel = 10
+vel = 25
 
 X=sol[0]
 Y=sol[1]
+
+
+plt.xlim(1.15*X.min(),1.15*X.max())
+plt.ylim(1.15*X.min(),1.15*X.max())
+
+plt.gca().set_aspect('equal','box')
+
 def update(num):
     x,y = X[vel*num], Y[vel*num]
 
-    trayectoria1.set_data(X[max(0,int(0.1*vel*num)):vel*num],Y[max(0,int(0.1*vel*num)):vel*num])
+    masa.set_data(x,y)
+    trayectoria1.set_data(X[max(0,int(0.05*vel*num)):vel*num],Y[max(0,int(0.05*vel*num)):vel*num])
     
     return  trayectoria1
 
-trayectoria1, = plt.plot(X[0],Y[0])
+masa, = plt.plot(X[0],Y[0],'*',color='crimson',markersize=10)
+trayectoria1, = plt.plot(X[0],Y[0],color='crimson')
 
 
 ani = animation.FuncAnimation(fig, update, N//vel, interval=10000/(N//vel), blit=False)
 plt.show()
-ani.save('ani004.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
+ani.save('ani.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
