@@ -67,14 +67,20 @@ def update(num):
     return  trayectoria1
 
 masa0, = plt.plot(X0[0],Y0[0],'*',color='crimson',markersize=10)
-masa1, = plt.plot(X1[0],Y1[0],'*',color='crimson',markersize=10)
-masa2, = plt.plot(X2[0],Y2[0],'*',color='crimson',markersize=10)
-masa3, = plt.plot(X3[0],Y3[0],'*',color='crimson',markersize=10)
-masa4, = plt.plot(X4[0],Y4[0],'*',color='crimson',markersize=10)
+masa1, = plt.plot(X1[0],Y1[0],'*',color='purple',markersize=10)
+masa2, = plt.plot(X2[0],Y2[0],'*',color='navy',markersize=10)
+masa3, = plt.plot(X3[0],Y3[0],'*',color='cyan',markersize=10)
+masa4, = plt.plot(X4[0],Y4[0],'*',color='teal',markersize=10)
 
-trayectoria1, = plt.plot(X[0],Y[0],color='crimson')
+trayectoria0, = plt.plot(X0[0],Y0[0],color='crimson')
+trayectoria1, = plt.plot(X1[0],Y1[0],color='purple')
+trayectoria2, = plt.plot(X2[0],Y2[0],color='navy')
+trayectoria3, = plt.plot(X3[0],Y3[0],color='cyan')
+trayectoria4, = plt.plot(X4[0],Y4[0],color='teal')
+
 
 
 ani = animation.FuncAnimation(fig, update, N//vel, interval=10000/(N//vel), blit=False)
 plt.show()
 #ani.save('ani001.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
+
