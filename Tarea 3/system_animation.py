@@ -6,7 +6,7 @@ from scipy.integrate import odeint
 
 def solve_system(x0,y0,px0,py0,t0,tf): 
     Y0=[x0,y0,px0,py0] #arreglo con las condiciones iniciales 
-    t=np.linspace(t0,tf,1000000) #tiempo que dura la vaina
+    t=np.linspace(t0,tf,100000) #tiempo que dura la vaina
 
     l=1 #Parámetro lambda 
 
@@ -36,16 +36,16 @@ plt.ylabel("Y [m]")
 
 
 
-sol0 = solve_system(0.1,0,0.03,0.5,0,150)
-sol1 = solve_system(0.1,0,0.04,0.5,0,150)
+sol0 = solve_system(0.1,0,0.048,0.5,0,150)
+sol1 = solve_system(0.1,0,0.049,0.5,0,150)
 sol2 = solve_system(0.1,0,0.05,0.5,0,150)
-sol3 = solve_system(0.1,0,0.06,0.5,0,150)
-sol4 = solve_system(0.1,0,0.07,0.5,0,150)
+sol3 = solve_system(0.1,0,0.051,0.5,0,150)
+sol4 = solve_system(0.1,0,0.052,0.5,0,150)
 
 N = len(sol0[0])
 
 global vel
-vel = 300
+vel = 30
 
 X0,Y0=sol0[:2]
 X1,Y1=sol1[:2]
@@ -76,11 +76,11 @@ def update(num):
     masa3.set_data(x3,y3)
     masa4.set_data(x4,y4)
 
-    trayectoria0.set_data(X0[max(0,int(0.05*vel*num)):vel*num],Y0[max(0,int(0.05*vel*num)):vel*num])
-    trayectoria1.set_data(X1[max(0,int(0.05*vel*num)):vel*num],Y1[max(0,int(0.05*vel*num)):vel*num])
-    trayectoria2.set_data(X2[max(0,int(0.05*vel*num)):vel*num],Y2[max(0,int(0.05*vel*num)):vel*num])
-    trayectoria3.set_data(X3[max(0,int(0.05*vel*num)):vel*num],Y3[max(0,int(0.05*vel*num)):vel*num])
-    trayectoria4.set_data(X4[max(0,int(0.05*vel*num)):vel*num],Y4[max(0,int(0.05*vel*num)):vel*num])
+    trayectoria1.set_data(X1[max(0,int(0.5*vel*num)):vel*num],Y1[max(0,int(0.5*vel*num)):vel*num])
+    trayectoria2.set_data(X2[max(0,int(0.5*vel*num)):vel*num],Y2[max(0,int(0.5*vel*num)):vel*num])
+    trayectoria0.set_data(X0[max(0,int(0.5*vel*num)):vel*num],Y0[max(0,int(0.5*vel*num)):vel*num])
+    trayectoria3.set_data(X3[max(0,int(0.5*vel*num)):vel*num],Y3[max(0,int(0.5*vel*num)):vel*num])
+    trayectoria4.set_data(X4[max(0,int(0.5*vel*num)):vel*num],Y4[max(0,int(0.5*vel*num)):vel*num])
     
 
 masa0, = plt.plot(X0[0],Y0[0],'*',color='crimson',markersize=10)
@@ -99,5 +99,5 @@ trayectoria4, = plt.plot(X4[0],Y4[0],color='teal')
 
 ani = animation.FuncAnimation(fig, update, N//vel, interval=10000/(N//vel), blit=False)
 plt.show()
-ani.save('ani002.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
+ani.save('ani004.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
 
