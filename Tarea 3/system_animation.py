@@ -6,7 +6,7 @@ from scipy.integrate import odeint
 
 def solve_system(x0,y0,px0,py0,t0,tf): 
     Y0=[x0,y0,px0,py0] #arreglo con las condiciones iniciales 
-    t=np.linspace(t0,tf,100000) #tiempo que dura la vaina
+    t=np.linspace(t0,tf,1000000) #tiempo que dura la vaina
 
     l=1 #Parámetro lambda 
 
@@ -36,35 +36,52 @@ plt.ylabel("Y [m]")
 
 
 
-sol0 = solve_system(0.1,0,0.1,0.02,0,150)
-sol1 = solve_system(0.12,0,0.1,0.02,0,150)
-sol2 = solve_system(0.14,0,0.1,0.02,0,150)
-sol3 = solve_system(0.16,0,0.1,0.02,0,150)
-sol4 = solve_system(0.18,0,0.1,0.02,0,150
+sol0 = solve_system(0.1,0,0.03,0.5,0,150)
+sol1 = solve_system(0.1,0,0.04,0.5,0,150)
+sol2 = solve_system(0.1,0,0.05,0.5,0,150)
+sol3 = solve_system(0.1,0,0.06,0.5,0,150)
+sol4 = solve_system(0.1,0,0.07,0.5,0,150)
 
-N=len(sol0[0])
+N = len(sol0[0])
 
 global vel
-vel = 30
+vel = 300
 
-X0,Y0=sol0
-X1,Y1=sol1
-X2,Y2=sol2
-X3,Y3=sol3
-X4,Y4=sol4
+X0,Y0=sol0[:2]
+X1,Y1=sol1[:2]
+X2,Y2=sol2[:2]
+X3,Y3=sol3[:2]
+X4,Y4=sol4[:2]
 
-plt.xlim(1.15*X0.min(),1.15*X0.max())
-plt.ylim(1.15*Y0.min(),1.15*Y0.max())
+limin=1.15*np.min([*X0,*X1,*X2,*X3,*X4,*Y0,*Y1,*Y2,*Y3,*Y4])
+limax=1.15*np.max([*X0,*X1,*X2,*X3,*X4,*Y0,*Y1,*Y2,*Y3,*Y4])
+
+
+plt.xlim(limin,limax)
+plt.ylim(limin,limax)
 
 plt.gca().set_aspect('equal','box')
 
 def update(num):
-    x,y = X[vel*num], Y[vel*num]
+    x0,y0 = X0[vel*num], Y0[vel*num]
+    x1,y1 = X1[vel*num], Y1[vel*num]
+    x2,y2 = X2[vel*num], Y2[vel*num]
+    x3,y3 = X3[vel*num], Y3[vel*num]
+    x4,y4 = X4[vel*num], Y4[vel*num]
 
-    masa.set_data(x,y)
-    trayectoria1.set_data(X[max(0,int(0.05*vel*num)):vel*num],Y[max(0,int(0.05*vel*num)):vel*num])
+
+    masa0.set_data(x0,y0)
+    masa1.set_data(x1,y1)
+    masa2.set_data(x2,y2)
+    masa3.set_data(x3,y3)
+    masa4.set_data(x4,y4)
+
+    trayectoria0.set_data(X0[max(0,int(0.05*vel*num)):vel*num],Y0[max(0,int(0.05*vel*num)):vel*num])
+    trayectoria1.set_data(X1[max(0,int(0.05*vel*num)):vel*num],Y1[max(0,int(0.05*vel*num)):vel*num])
+    trayectoria2.set_data(X2[max(0,int(0.05*vel*num)):vel*num],Y2[max(0,int(0.05*vel*num)):vel*num])
+    trayectoria3.set_data(X3[max(0,int(0.05*vel*num)):vel*num],Y3[max(0,int(0.05*vel*num)):vel*num])
+    trayectoria4.set_data(X4[max(0,int(0.05*vel*num)):vel*num],Y4[max(0,int(0.05*vel*num)):vel*num])
     
-    return  trayectoria1
 
 masa0, = plt.plot(X0[0],Y0[0],'*',color='crimson',markersize=10)
 masa1, = plt.plot(X1[0],Y1[0],'*',color='purple',markersize=10)
@@ -82,5 +99,5 @@ trayectoria4, = plt.plot(X4[0],Y4[0],color='teal')
 
 ani = animation.FuncAnimation(fig, update, N//vel, interval=10000/(N//vel), blit=False)
 plt.show()
-#ani.save('ani001.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
+ani.save('ani002.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
 
