@@ -1,0 +1,67 @@
+
+Criterios para los ejercicios de tarea:
+1. Planteamiento del problema, objetivos.
+2. Paso a paso del proceso de solución del problema.
+3. Análisis de los resultados, conclusiones y perspectivas
+   para una posible continuación del trabajo.
+
+----------
+
+Movimiento de una partícula sometida a una fuerza fx = -m omega^2 x en 
+relatividad especial. Véase el libro de problemas de Tsamparlis.
+
+----------
+
+Descripción de algún experimento para detectar ondas gravitacionales.
+
+----------
+
+Europhys. Lett., 49 (2), pp. 156–161 (2000)
+EUROPHYSICS LETTERS 15 January 2000
+Classical oscillators in general relativity
+I. I. Cotaescu and N. D. Vulcanov
+DOI: 10.1209/epl/i2000-00100-3
+
+----------
+
+Lectura acerca de la posible relación entre la relatividad especial y la 
+mecánica cuántica. 
+https://www.quora.com/There-are-things-that-move-faster-than-light-so-why-is-Einsteins-theory-of-special-relativity-not-violated
+
+----------
+
+Tensor de Riemann, tensor de Ricci y escalar de curvatura en economía. 
+Use datos del salario mínimo y de la inflación entre 2000 y 2020.
+
+----------
+
+Lectura acerca de la constante de Hubble y el problema de la constante 
+cosmológica, la materia oscura y la energía oscura.
+
+----------
+
+Lecturas acerca de gravedad y mecánica cuántica. 
+https://www.youtube.com/watch?time_continue=251&v=Ov98y_DCvRY&feature=emb_logo
+
+----------
+
+Caos y relatividad general.
+Journal of Physics: Conference Series 600 (2015) 012070
+DOI: 10.1088/1742-6596/600/1/012070
+Regular and chaotic motion in general relativity:
+The case of an inclined black hole magnetosphere
+Ondrej Kopácek and Vladimír Karas
+
+----------
+
+Correspondencia AdS-QFT (particularmente entre las ecuaciones 
+de Navier-Stokes y las ecuaciones de Einstein),
+https://www.youtube.com/watch?v=IQzTBivXkAg&t=2061s
+
+----------
+
+Aplicaciones técnicas de la relatividad general: el GPS, ...
+https://engagedscholarship.csuohio.edu/cgi/viewcontent.cgi?article=1071&context=tdr
+https://www.zarm.uni-bremen.de/fileadmin/images/fundamental/publications/2006Laemmerzahl.pdf
+
+----------
